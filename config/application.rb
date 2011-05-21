@@ -42,6 +42,7 @@ module TabletopCalculator
     config.generators do |g|
       g.fixture_replacement :factory_girl
       g.test_framework  :rspec
+      g.template_engine :haml
     end
   end
 end
