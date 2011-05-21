@@ -42,8 +42,8 @@ module TabletopCalculator
     config.filter_parameters += [:password]
     
     config.generators do |g|
-      g.test_framework  :rspec
-      g.fixture_replacement :factory_girl
+      g.test_framework :rspec, :fixture => true, :views => false, :fixture_replacement => :factory_girl
+      #g.fixture_replacement :factory_girl
       g.template_engine :haml
     end
   end
