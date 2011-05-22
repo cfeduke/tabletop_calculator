@@ -13,3 +13,5 @@ GameSystem.create!(:name => "Warhammer 40,000", :game_publisher_id => gw.id)
 GameSystem.create!(:name => "Warhammer Fantasy", :game_publisher_id => gw.id)
 
 GameSystem.create!(:name => "Flames of War", :game_publisher_id => GamePublisher.where(:name => 'Battlefront Miniatures').first.id)
+
+# AdminUser.create!(:email => 'admin@example.com', :password => 'password', :password_confirmation => 'password')
