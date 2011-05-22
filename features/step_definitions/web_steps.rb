@@ -45,6 +45,10 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Then /^when (?:|I )go to (\bthe .+ page\b) permission should be denied$/ do |page| 
+  lambda {When "I go to #{page}"}.should raise_error(CanCan::Unauthorized) 
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end

@@ -33,4 +33,5 @@ end
 group :development do
   gem 'rails3-generators'
   gem 'haml-rails'
+  gem 'launchy'
 end
