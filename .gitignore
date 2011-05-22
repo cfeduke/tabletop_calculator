@@ -2,3 +2,5 @@
 db/*.sqlite3
 log/*.log
 tmp/
+.scss_cache/
+public/stylesheets/admin/active_admin.css
