@@ -1,0 +1,19 @@
+- title "Army Lists"
+
+%table
+  %tr
+    %th Name
+    %th Game system
+    %th Maximum point value
+    %th User
+  - for army_list in @army_lists
+    %tr
+      %td= army_list.name
+      %td= army_list.game_system_id
+      %td= army_list.maximum_point_value
+      %td= army_list.user_id
+      %td= link_to 'Show', army_list
+      %td= link_to 'Edit', edit_army_list_path(army_list)
+      %td= link_to 'Destroy', army_list, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Army List", new_army_list_path

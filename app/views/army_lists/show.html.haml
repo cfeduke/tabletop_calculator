@@ -1,0 +1,21 @@
+- title "Army List"
+
+%p
+  %strong Name:
+  = @army_list.name
+%p
+  %strong Game System:
+  = @army_list.game_system_id
+%p
+  %strong Maximum Point Value:
+  = @army_list.maximum_point_value
+%p
+  %strong User:
+  = @army_list.user_id
+
+%p
+  = link_to "Edit", edit_army_list_path(@army_list)
+  |
+  = link_to "Destroy", @army_list, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", army_lists_path

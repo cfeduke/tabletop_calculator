@@ -1,4 +1,6 @@
 TabletopCalculator::Application.routes.draw do
+  resources :army_lists
+
   devise_for :users
 
   ActiveAdmin.routes(self)

@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  game_system_id: 1
+  maximum_point_value: 1
+  user_id: 1
+
+two:
+  name: MyString
+  game_system_id: 1
+  maximum_point_value: 1
+  user_id: 1

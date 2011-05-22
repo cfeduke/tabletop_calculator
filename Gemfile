@@ -7,11 +7,11 @@ gem 'sqlite3'
 
 # Asset template engines
 gem 'haml'
-gem 'haml-rails'
 gem 'sass'
 gem 'compass'
 gem 'compass-susy-plugin'
 gem 'compass-colors'
+gem 'nifty-generators'
 
 gem 'jquery-rails'
 
@@ -24,10 +24,13 @@ group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'capybara'
-  #gem 'capybara-webkit' #requires the qt SDK installed
+  gem 'mocha'
+  gem 'webrat'
+  # http://get.qt.nokia.com/qt/source/qt-mac-opensource-4.7.3.dmg
+  #gem 'capybara-webkit' #requires the qt libs installed
 end
 
 group :development do
   gem 'rails3-generators'
+  gem 'haml-rails'
 end
