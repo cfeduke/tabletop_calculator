@@ -1,0 +1,17 @@
+!!!5
+
+%html
+  %head
+    %title= Tabletop Calculator
+    = stylesheet_link_tag :all
+    = stylesheet_link_tag "screen"
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    %p.notice
+      = notice
+    %p.alert
+      = alert
+
+	  = yield
+	

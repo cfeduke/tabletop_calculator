@@ -96,6 +96,11 @@ GEM
     gherkin (2.3.8)
       json (>= 1.4.6)
     haml (3.1.1)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     has_scope (0.5.0)
     i18n (0.5.0)
     inherited_resources (1.2.2)
@@ -191,6 +196,8 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   factory_girl_rails
+  haml
+  haml-rails
   jquery-rails
   rails
   rails3-generators

@@ -1,4 +1,6 @@
 TabletopCalculator::Application.routes.draw do
+  get "home/index"
+
   ActiveAdmin.routes(self)
   
   root :to => "home#index"

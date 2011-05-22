@@ -6,6 +6,8 @@ gem 'rails'
 gem 'sqlite3'
 
 # Asset template engines
+gem 'haml'
+gem 'haml-rails'
 gem 'sass'
 gem 'compass'
 gem 'compass-susy-plugin'
