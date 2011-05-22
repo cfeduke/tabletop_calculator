@@ -20,5 +20,15 @@ class Ability
     # these will grant permission on each item in the array.
     #
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
+    
+    # guest
+    if (user.nil?)
+      can :read, :home
+      can [:new, :create, :destroy], Devise::SessionsController
+      #can :access, :all
+      #can :new, :registrations
+    else
+      can :access, :all
+    end
   end
 end
