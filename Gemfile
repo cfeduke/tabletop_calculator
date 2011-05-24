@@ -21,6 +21,7 @@ gem 'cancan', :git => "git://github.com/ryanb/cancan.git", :branch => "2.0"
 
 group :test do
   gem 'cucumber-rails'
+  gem 'pickle'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'database_cleaner'

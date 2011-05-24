@@ -1,27 +1,27 @@
-/* line 3, sass/application.sass */
+/* line 3, ../../app/stylesheets/application.scss */
 body {
   background-color: #4b7399;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
 
-/* line 9, sass/application.sass */
+/* line 11, ../../app/stylesheets/application.scss */
 a {
   color: blue;
 }
-/* line 11, sass/application.sass */
+/* line 13, ../../app/stylesheets/application.scss */
 a img {
   border: none;
 }
 
-/* line 14, sass/application.sass */
+/* line 16, ../../app/stylesheets/application.scss */
 .clear {
   clear: both;
   height: 0;
   overflow: hidden;
 }
 
-/* line 19, sass/application.sass */
+/* line 22, ../../app/stylesheets/application.scss */
 #container {
   width: 75%;
   margin: 0 auto;
@@ -31,7 +31,7 @@ a img {
   margin-top: 20px;
 }
 
-/* line 27, sass/application.sass */
+/* line 33, ../../app/stylesheets/application.scss */
 #flash_notice,
 #flash_error,
 #flash_alert {
@@ -39,25 +39,25 @@ a img {
   margin: 10px 0;
 }
 
-/* line 33, sass/application.sass */
+/* line 38, ../../app/stylesheets/application.scss */
 #flash_notice {
   background-color: #ccffcc;
   border: solid 1px #66cc66;
 }
 
-/* line 37, sass/application.sass */
+/* line 44, ../../app/stylesheets/application.scss */
 #flash_error,
 #flash_alert {
   background-color: #ffcccc;
   border: solid 1px #cc6666;
 }
 
-/* line 42, sass/application.sass */
+/* line 49, ../../app/stylesheets/application.scss */
 .fieldWithErrors {
   display: inline;
 }
 
-/* line 45, sass/application.sass */
+/* line 53, ../../app/stylesheets/application.scss */
 .error_messages {
   width: 400px;
   border: 2px solid #cf0000;
@@ -67,7 +67,7 @@ a img {
   background-color: #f0f0f0;
   font-size: 12px;
 }
-/* line 54, sass/application.sass */
+/* line 61, ../../app/stylesheets/application.scss */
 .error_messages h2 {
   text-align: left;
   padding: 5px 5px 5px 15px;
@@ -77,11 +77,11 @@ a img {
   background-color: #cc0000;
   color: white;
 }
-/* line 63, sass/application.sass */
+/* line 72, ../../app/stylesheets/application.scss */
 .error_messages p {
   margin: 8px 10px;
 }
-/* line 65, sass/application.sass */
+/* line 73, ../../app/stylesheets/application.scss */
 .error_messages ul {
   margin: 0;
 }
