@@ -96,6 +96,11 @@ GEM
     fssm (0.2.7)
     gherkin (2.3.8)
       json (>= 1.4.6)
+    growl (1.0.3)
+    guard (0.3.4)
+      thor (~> 0.14.6)
+    guard-rspec (0.3.1)
+      guard (>= 0.2.2)
     haml (3.1.1)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -159,6 +164,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    rb-fsevent (0.4.0)
     responders (0.6.4)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
@@ -208,6 +214,9 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   factory_girl_rails
+  growl
+  guard
+  guard-rspec
   haml
   haml-rails
   jquery-rails
@@ -218,6 +227,7 @@ DEPENDENCIES
   rails
   rails3-generators
   rake (= 0.8.7)
+  rb-fsevent
   rspec-rails
   sass
   sqlite3

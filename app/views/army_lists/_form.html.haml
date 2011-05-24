@@ -5,9 +5,9 @@
     %br
     = f.text_field :name
   %p
-    = f.label :game_system_id
+    = f.label :game_system_id, "Game System"
     %br
-    = f.text_field :game_system_id
+    = f.select(:game_system_id, GameSystem.order(:name), { :prompt => true })
   %p
     = f.label :points
     %br

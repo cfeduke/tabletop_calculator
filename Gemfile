@@ -11,7 +11,6 @@ gem 'sass'
 gem 'compass'
 gem 'compass-susy-plugin'
 gem 'compass-colors'
-gem 'nifty-generators'
 
 gem 'jquery-rails'
 
@@ -33,6 +32,14 @@ end
 
 group :development do
   gem 'rails3-generators'
+  gem 'nifty-generators'
   gem 'haml-rails'
   gem 'launchy'
+  gem 'guard' 
+  gem 'guard-rspec' # run `guard init rspec` to create Guardfile
+  
+  if RUBY_PLATFORM.downcase.include?("darwin")
+    gem 'rb-fsevent'
+    gem 'growl'
+  end
 end
