@@ -13,4 +13,7 @@ describe ArmyList do
   it "requires points to be numeric" do
     -> { ArmyList.create!(:name => "Invalid points", :points => 'xxx') }.should raise_error
   end
+  it "requires game system" do
+    -> { ArmyList.create!(:name => "Invalid game system") }.should raise_error
+  end
 end

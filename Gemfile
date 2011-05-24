@@ -36,10 +36,11 @@ group :development do
   gem 'haml-rails'
   gem 'launchy'
   gem 'guard' 
-  gem 'guard-rspec' # run `guard init rspec` to create Guardfile
+  gem 'guard-rspec'
+  gem 'guard-bundler'
   
   if RUBY_PLATFORM.downcase.include?("darwin")
     gem 'rb-fsevent'
-    gem 'growl'
+    gem 'growl' # also install growlnotify from the Extras/growlnotify/growlnotify.pkg in Growl disk image
   end
 end
