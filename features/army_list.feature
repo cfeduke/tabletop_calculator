@@ -16,7 +16,6 @@ Feature: user creates army list
 		Given I am not authenticated
 		Then when I go to the new_army_list page permission should be denied
 		
-	@wip
 	Scenario: army list validation
 		Given I am a new, authenticated user
 		When I go to the new_army_list page
