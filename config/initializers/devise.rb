@@ -192,3 +192,19 @@ Devise.setup do |config|
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
 end
+
+class Devise::RegistrationsController
+  alias :super_create :create
+  
+  def create
+    if verify_recaptcha
+      super_create
+    else
+      build_resource
+      clean_up_passwords(resource)
+      flash[:alert] = "There was an error with the recaptcha code below. Please re-enter the code and click submit."
+      render_with_scope :new
+    end
+  end
+end
+
