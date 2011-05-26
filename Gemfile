@@ -4,6 +4,7 @@ gem 'rake', '=0.8.7'
 
 gem 'rails'
 gem 'sqlite3'
+gem 'recaptcha', :require => 'recaptcha/rails'
 
 # Asset template engines
 gem 'haml'

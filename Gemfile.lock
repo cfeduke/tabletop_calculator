@@ -168,6 +168,7 @@ GEM
       thor (~> 0.14.4)
     rake (0.8.7)
     rb-fsevent (0.4.0)
+    recaptcha (0.3.1)
     responders (0.6.4)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
@@ -232,6 +233,7 @@ DEPENDENCIES
   rails3-generators
   rake (= 0.8.7)
   rb-fsevent
+  recaptcha
   rspec-rails
   sass
   sqlite3
