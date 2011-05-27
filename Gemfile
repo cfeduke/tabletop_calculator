@@ -40,6 +40,10 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-bundler'
   
+  # for converting ERb views to Haml (the one true way...)
+  gem 'hpricot'
+  gem 'ruby_parser'
+  
   if RUBY_PLATFORM.downcase.include?("darwin")
     gem 'rb-fsevent'
     gem 'growl' # also install growlnotify from the Extras/growlnotify/growlnotify.pkg in Growl disk image
