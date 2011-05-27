@@ -7,7 +7,7 @@
   %p
     = f.label :game_system_id, "Game System"
     %br
-    = f.select(:game_system_id, GameSystem.order(:name), { :prompt => true })
+    = f.select(:game_system_id, GameSystem.order(:name).collect { |gs| [ gs.name, gs.id ] }, { :prompt => true })
   %p
     = f.label :points
     %br
