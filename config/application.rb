@@ -40,7 +40,7 @@ module TabletopCalculator
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    #config.filter_parameters += [:password]
     
     config.generators do |g|
       g.test_framework :rspec, :fixture => true, :views => false, :fixture_replacement => :factory_girl, :view_specs => false
