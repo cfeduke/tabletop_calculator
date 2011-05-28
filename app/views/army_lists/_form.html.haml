@@ -5,6 +5,10 @@
     %br
     = f.text_field :name
   %p
+    = f.label :tags
+    %br
+    = f.text_field :tags
+  %p
     = f.label :game_system_id, "Game System"
     %br
     = f.select(:game_system_id, GameSystem.order(:name).collect { |gs| [ gs.name, gs.id ] }, { :prompt => true })
