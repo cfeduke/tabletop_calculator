@@ -4,3 +4,4 @@ log/*.log
 tmp/
 .sass_cache/
 public/stylesheets/admin/active_admin.css
+db/test.sqlite3-journal
