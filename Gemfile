@@ -46,6 +46,8 @@ group :development do
   
   gem 'cheat'
   
+  gem 'spork', '~> 0.9.0.rc'
+  
   if RUBY_PLATFORM.downcase.include?("darwin")
     gem 'rb-fsevent'
     gem 'growl' # also install growlnotify from the Extras/growlnotify/growlnotify.pkg in Growl disk image
