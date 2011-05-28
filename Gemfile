@@ -45,6 +45,7 @@ group :development do
   gem 'ruby_parser'
   
   gem 'spork', '~> 0.9.0.rc'
+  gem 'terminitor'
   
   if RUBY_PLATFORM.downcase.include?("darwin")
     gem 'rb-fsevent'
