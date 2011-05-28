@@ -3,7 +3,7 @@ Given /^I fill in the #{capture_model}(?:'s)? email/ do |user|
 end
 
 Given /^I fill in the #{capture_model}(?:'s)? password/ do |user|
-  fill_in("user_password", :with => model!(user).password)
+  fill_in("user_password", :with => "password")
 end
 
 Given /^I am not authenticated$/ do
@@ -15,7 +15,6 @@ Given /^I am a new, authenticated user$/ do
   And %{I go to the new user session page}
   And %{I fill in the user's email}
   And %{I fill in the user's password}
-  Then %{show me the page}
   And %{I press "Sign in"}
 end
 
