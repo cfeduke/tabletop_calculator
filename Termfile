@@ -1,35 +1,29 @@
 module Boundary
-  if `hostname` =~ /Charles-Fedukes-MacBook-Pro.local/
+  hname = `hostname`
+  
+  if hname =~ /Charles-Fedukes-MacBook-Pro.local/
     MAIN_WINDOW = [0, 22, 928, 948]
     UPPER_RIGHT = [932, 23, 1678, 403]
     LOWER_RIGHT = [932, 408, 1678, 950]
-  else
-    MAIN_WINDOW = [0, 22, 928, 948]
-    UPPER_RIGHT = [932, 23, 1678, 403]
-    LOWER_RIGHT = [932, 408, 1678, 950]
+  elsif hname =~ /Kanako.local/
+    MAIN_WINDOW = [0, 22, 700, 870]
+    UPPER_RIGHT = [708, 22, 1438, 400]
+    LOWER_RIGHT = [708, 408, 1438, 870]
   end
-end
-
-def cd_path
-  run 'cd ~/Projects/tabletop_calculator'
 end
 
 # big one on the left
 window :bounds => Boundary::MAIN_WINDOW, :settings => "Homebrew" do
-  cd_path
   run 'git status'
 end
 
 # upper right
 window :bounds => Boundary::UPPER_RIGHT, :settings => "Homebrew" do
-	cd_path
   run 'bundle exec rails s'
 end
 
 # lower right
 window :bounds => Boundary::LOWER_RIGHT, :settings => "Homebrew" do
-    before { cd_path }
-
     tab :settings => "Homebrew" do
       run 'guard'
     end
@@ -46,4 +40,3 @@ window :bounds => Boundary::LOWER_RIGHT, :settings => "Homebrew" do
     
     run 'bundle exec rails c'
 end
-
