@@ -38,7 +38,6 @@ Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
-  require 'factory_girl'
   
   RSpec.configure do |config|
     # == Mock Framework
@@ -61,6 +60,7 @@ Spork.prefork do
 end
 
 Spork.each_run do
+  require 'factory_girl'
   # This code will be run each time you run your specs.
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
