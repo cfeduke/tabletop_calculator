@@ -6,12 +6,17 @@
     %th Game system
     %th Maximum point value
     %th User
+    %th Tags
+    %th
+    %th
+    %th
   - for army_list in @army_lists
     %tr
       %td= army_list.name
       %td= army_list.game_system_id
       %td= army_list.points
       %td= army_list.user_id
+      %td= army_list.tags
       %td= link_to 'Show', army_list
       %td= link_to 'Edit', edit_army_list_path(army_list)
       %td= link_to 'Destroy', army_list, :confirm => 'Are you sure?', :method => :delete

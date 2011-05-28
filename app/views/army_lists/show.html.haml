@@ -12,6 +12,9 @@
 %p
   %strong User:
   = @army_list.user_id
+%p
+  %strong Tags:
+  = @army_list.tags
 
 %p
   = link_to "Edit", edit_army_list_path(@army_list)
