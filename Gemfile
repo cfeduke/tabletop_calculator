@@ -44,6 +44,8 @@ group :development do
   gem 'hpricot'
   gem 'ruby_parser'
   
+  gem 'cheat'
+  
   if RUBY_PLATFORM.downcase.include?("darwin")
     gem 'rb-fsevent'
     gem 'growl' # also install growlnotify from the Extras/growlnotify/growlnotify.pkg in Growl disk image
