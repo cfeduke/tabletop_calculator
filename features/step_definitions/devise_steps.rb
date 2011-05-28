@@ -1,18 +1,22 @@
+Given /^I fill in the #{capture_model}(?:'s)? email/ do |user|
+  fill_in("user_email", :with => model!(user).email)
+end
+
+Given /^I fill in the #{capture_model}(?:'s)? password/ do |user|
+  fill_in("user_password", :with => model!(user).password)
+end
+
 Given /^I am not authenticated$/ do
   visit('/users/sign_out') # ensure that at least
 end
 
 Given /^I am a new, authenticated user$/ do
-  email = 'test@example.com'
-  password = 'password'
-  display_name = 'display_name'
-
-  Given %{a user exists with email: "#{email}", password: "#{password}", password_confirmation: "#{password}", display_name: "#{display_name}"}
-  And %{I sign in with the email "#{email}" and password "#{password}"}
-  # And %{I go to the new_user_session page}
-  #   And %{I fill in "user_email" with "#{email}"}
-  #   And %{I fill in "user_password" with "#{password}"}
-  #   And %{I press "Sign in"}
+  Given %{a user exists}
+  And %{I go to the new user session page}
+  And %{I fill in the user's email}
+  And %{I fill in the user's password}
+  Then %{show me the page}
+  And %{I press "Sign in"}
 end
 
 Given /^I sign in with the email "([^"]*)" and password "([^"]*)"$/ do |email, password|
