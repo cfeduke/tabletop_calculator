@@ -1,4 +1,4 @@
-describe "army_list/show.html.haml" do
+describe "army_lists/show.html.haml" do
   include Devise::TestHelpers
   
   before :each do
@@ -6,9 +6,14 @@ describe "army_list/show.html.haml" do
     sign_in @user
   end
   
-  it "should show the user's display name" do
-    Factory.create(:army_list)
-    get :show, :id => ArmyList.last
-    response.should have_tag("a", :text => @user.display_name)
+  it "displays the author's display name" do
+    pending
+    assign(:army_list, 
+      stub_model(ArmyList, 
+        :user => User.new(:display_name => "John Smith")
+      )
+    )
+    render
+    render.should have_tag("a", :text => "John Smith")
   end
 end
