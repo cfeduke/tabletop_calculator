@@ -45,6 +45,8 @@ group :development do
   gem 'hpricot'
   gem 'ruby_parser'
   
+  gem 'cheat'
+  
   gem 'spork', '~> 0.9.0.rc'
   
   if RUBY_PLATFORM.downcase.include?("darwin")

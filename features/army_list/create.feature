@@ -31,3 +31,4 @@ Feature: user creates army list
 		And I fill in "Points" with "xxx"
 		And I press "Create"
 		Then I should see "Points is not a number"
+	  
