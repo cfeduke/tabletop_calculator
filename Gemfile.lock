@@ -186,6 +186,9 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
+    rspec2-rails-views-matchers (0.0.5)
+      nokogiri (~> 1.4.4)
+      rspec (>= 2.0.0)
     ruby_parser (2.0.6)
       sexp_processor (~> 3.0)
     rubyzip (0.9.4)
@@ -245,6 +248,7 @@ DEPENDENCIES
   rb-fsevent
   recaptcha
   rspec-rails
+  rspec2-rails-views-matchers
   ruby_parser
   sass
   spork (~> 0.9.0.rc)

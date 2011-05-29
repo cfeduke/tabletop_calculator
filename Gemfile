@@ -28,6 +28,7 @@ group :test do
   gem 'database_cleaner'
   gem 'mocha'
   gem 'webrat'
+  gem 'rspec2-rails-views-matchers'
   # http://get.qt.nokia.com/qt/source/qt-mac-opensource-4.7.3.dmg
   #gem 'capybara-webkit' #requires the qt libs installed
 end

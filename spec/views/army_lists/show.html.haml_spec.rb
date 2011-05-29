@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe "army_lists/show.html.haml" do
   include Devise::TestHelpers
   
@@ -14,6 +16,6 @@ describe "army_lists/show.html.haml" do
       )
     )
     render
-    render.should have_tag("a", :text => "John Smith")
+    response.should have_tag("a", :text => "John Smith")
   end
 end
