@@ -10,6 +10,9 @@ describe Ability do
     it "can view the home page" do
       guest.can?(:read, :home).should be_true
     end
+    it "can view a user's page" do
+      guest.can?(:read, :users).should be_true
+    end
   end
   
 end

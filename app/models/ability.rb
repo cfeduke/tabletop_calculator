@@ -25,6 +25,7 @@ class Ability
     if (user.nil?)
       can :read, :home
       can [:new, :create, :destroy], Devise::SessionsController
+      can :read, :users
       #can :access, :all
       #can :new, :registrations
     else

@@ -2,6 +2,7 @@ TabletopCalculator::Application.routes.draw do
   resources :army_lists
 
   devise_for :users, :controllers => { :registrations => "registrations" }
+  get "users/:id" => 'users#show'
 
   ActiveAdmin.routes(self)
   
