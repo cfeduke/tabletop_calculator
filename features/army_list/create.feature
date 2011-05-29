@@ -3,8 +3,7 @@ Feature: user creates army list
 	In order to create an army list
 	As a user of the system
 	I want to be able to save an army list
-	
-	@wip
+
 	Scenario: create an army list
 		Given I am a new, authenticated user
 		And a game_system exists with name: "Warhammer 40,000"
