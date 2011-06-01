@@ -11,7 +11,7 @@
   = @army_list.points
 %p
   %strong User:
-  =# link_to @army_list.user.display_name, @army_list.user
+  = link_to @army_list.user.display_name, users_path(@army_list.user) unless @army_list.user.nil?
 %p
   %strong Tags:
   = @army_list.tags
