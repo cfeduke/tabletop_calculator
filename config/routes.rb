@@ -1,4 +1,6 @@
 TabletopCalculator::Application.routes.draw do
+  get "game_system/show"
+
   resources :army_lists
 
   devise_for :users, :controllers => { :registrations => "registrations" }
