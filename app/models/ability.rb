@@ -26,6 +26,7 @@ class Ability
       can :read, :home
       can [:new, :create, :destroy], Devise::SessionsController
       can :read, :users
+      can :read, :factions
       #can :access, :all
       #can :new, :registrations
     else

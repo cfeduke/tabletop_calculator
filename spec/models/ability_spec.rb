@@ -13,6 +13,9 @@ describe Ability do
     it "can view a user's page" do
       guest.can?(:read, :users).should be_true
     end
+    it "can view a faction" do
+      guest.can?(:read, :factions).should be_true
+    end
   end
   
 end

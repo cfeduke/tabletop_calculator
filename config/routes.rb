@@ -1,10 +1,11 @@
 TabletopCalculator::Application.routes.draw do
-  get "game_system/show"
-
   resources :army_lists
-
+  resources :game_systems, :only => [:index, :show]
+  resources :factions, :only => [:index, :show]
+  
   devise_for :users, :controllers => { :registrations => "registrations" }
-  match 'users/:id' => 'users#show', :as => :users, :via => :get
+  get 'users/:id' => 'users#show', :as => :users
+
 
   ActiveAdmin.routes(self)
   

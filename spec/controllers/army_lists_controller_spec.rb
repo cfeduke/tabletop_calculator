@@ -47,8 +47,9 @@ describe ArmyListsController do
     #   end
     
     it "should create an army_list with the logged in user as the author" do
-      post :create, :army_list => { :name => "A name", :points => 1750 }
-      ArmyList.last.user.should == @user
+      name = "Logged In User List Spec #{rand(36**8).to_s(36)}"
+      post :create, :army_list => { :name => name, :points => 1750, :game_system_id => GameSystem.first.id }
+      ArmyList.where(:name => name).first.user.should == @user
     end
   end
   

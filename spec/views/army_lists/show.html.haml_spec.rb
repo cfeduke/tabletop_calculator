@@ -9,6 +9,7 @@ describe "army_lists/show.html.haml" do
           u.display_name = "John Smith"
           u.id = 1
         end,
+        :faction => "Faction",
         :game_system => GameSystem.new do |gs|
           gs.id = 1
           gs.name = "Generic Game System"
@@ -22,4 +23,5 @@ describe "army_lists/show.html.haml" do
   it { should have_tag("a", :text => "John Smith") }
   it { should have_tag("p", :text => /Name/m) }
   it { should have_tag("a", :text => /Generic Game System/m) }
+  it { should have_tag("a", :text => "Faction") }
 end
