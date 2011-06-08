@@ -50,6 +50,8 @@ group :development do
   
   gem 'spork', '~> 0.9.0.rc'
   
+  #gem 'terminitor' 'text-hyphen' requires Ruby version < 1.9 :(
+  
   if RUBY_PLATFORM.downcase.include?("darwin")
     gem 'rb-fsevent'
     gem 'growl' # also install growlnotify from the Extras/growlnotify/growlnotify.pkg in Growl disk image
