@@ -1,15 +1,13 @@
 require 'spec_helper'
 
 describe FactionsController do
-  include Devise::TestHelpers
   render_views
   
   describe "GET 'show'" do
-    it "should be successful" do
-      pending
-      #get 'show/blah'
-      #response.should be_success
-    end
+    before { get :show, :name => 'german' }
+    subject { response }
+    it { response.status.should == 200 }
+    it { should render_template(:show) }
   end
 
   describe "GET 'index'" do
