@@ -25,17 +25,17 @@ end
 # lower right
 window :bounds => Boundary::LOWER_RIGHT, :settings => "Homebrew" do
     tab :settings => "Homebrew" do
-      run 'guard'
+      run 'bundle exec guard'
     end
     
     # spork for rspec
     tab :settings => "Homebew" do
-      run 'spork'
+      run 'bundle exec spork'
     end
     
     # spork for cucumber:wip
     tab :settings => "Homebrew" do
-      run 'spork cucumber --port 8990'
+      run 'bundle exec spork cucumber --port 8990'
     end
     
     run 'bundle exec rails c'
