@@ -13,6 +13,7 @@ class ArmyListsController < ApplicationController
 
   def create
     @army_list = ArmyList.new(params[:army_list])
+    @army_list.user = current_user
     if @army_list.save
       redirect_to @army_list, :notice => "Successfully created army list."
     else

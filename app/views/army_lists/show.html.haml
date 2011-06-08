@@ -5,13 +5,16 @@
   = @army_list.name
 %p
   %strong Game System:
-  = @army_list.game_system_id
+  = link_to @army_list.game_system.name, @army_list.game_system unless @army_list.game_system.nil?
+%p
+  %strong Faction:
+  = link_to @army_list.faction, factions_path(@army_list.faction) unless @army_list.faction.nil? || @army_list.faction.empty?
 %p
   %strong Maximum Point Value:
   = @army_list.points
 %p
   %strong User:
-  = @army_list.user_id
+  = link_to @army_list.user.display_name, users_path(@army_list.user) unless @army_list.user.nil?
 %p
   %strong Tags:
   = @army_list.tags

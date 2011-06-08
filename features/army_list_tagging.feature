@@ -3,7 +3,7 @@ Feature: Adding tags to an army list
   As a user of the system
   I want to be able to add tags to army lists
     
-  @wip
+
   Scenario: Add new tag
     Given I am a new, authenticated user
     And the following army lists exist:

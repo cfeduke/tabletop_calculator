@@ -28,6 +28,7 @@ group :test do
   gem 'database_cleaner'
   gem 'mocha'
   gem 'webrat'
+  gem 'rspec2-rails-views-matchers'
   # http://get.qt.nokia.com/qt/source/qt-mac-opensource-4.7.3.dmg
   #gem 'capybara-webkit' #requires the qt libs installed
 end
@@ -48,6 +49,8 @@ group :development do
   gem 'cheat'
   
   gem 'spork', '~> 0.9.0.rc'
+  
+  #gem 'terminitor' 'text-hyphen' requires Ruby version < 1.9 :(
   
   if RUBY_PLATFORM.downcase.include?("darwin")
     gem 'rb-fsevent'
